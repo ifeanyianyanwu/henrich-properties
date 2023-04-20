@@ -1,7 +1,14 @@
-import React from "react";
+import { AboutSection, HeroSection } from "../../components/sections";
+
+import classes from "./LandingPage.module.css";
 
 const LandingPage = () => {
-  return <div>LandingPage</div>;
+  return (
+    <div>
+      <HeroSection />
+      <AboutSection />
+    </div>
+  );
 };
 
 export default LandingPage;

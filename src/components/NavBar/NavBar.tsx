@@ -1,21 +1,33 @@
-import { HiMenu } from 'react-icons/hi';
-import Logo from '../../assets/logo_header.png';
-import React from 'react';
-import classes from './NavBar.module.css';
+import { HiMenu, HiX } from "react-icons/hi";
+import React, { useState } from "react";
+
+import DarkLogo from "../../assets/logo_dark.png";
+import Logo from "../../assets/logo_header.png";
+import classes from "./NavBar.module.css";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const [menuIsShown, setMenuIsShown] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleShowMenu = () => {
+    setMenuIsShown((prev) => !prev);
+  };
   return (
     <>
       <nav className={classes.nav_bar}>
-        <span onClick={() => {}} className={classes.logo}>
-          <img src={Logo} alt="Logo" />
-          <p>Henrich Properties LTD.</p>
+        <span onClick={() => navigate("/")} className={classes.logo}>
+          <img src={menuIsShown ? DarkLogo : Logo} alt="Logo" />
+          <p style={{ color: `${menuIsShown ? "black" : "white"}` }}>
+            Henrich Properties LTD.
+          </p>
         </span>
 
         <div className={classes.nav_links}>
-          <a className={classes.nav_link} href="#home">
+          <span className={classes.nav_link} onClick={() => navigate("/")}>
             Home
-          </a>
+          </span>
           <a className={classes.nav_link} href="#about">
             About
           </a>
@@ -26,24 +38,49 @@ const NavBar = () => {
             Contact
           </a>
         </div>
-        <HiMenu className={classes.menu_icon} />
+        {menuIsShown ? (
+          <HiX
+            className={classes.menu_icon}
+            style={{ color: "black" }}
+            onClick={handleShowMenu}
+          />
+        ) : (
+          <HiMenu className={classes.menu_icon} onClick={handleShowMenu} />
+        )}
       </nav>
 
       {/* MOBILE NAV BAR */}
-      <div className={classes.mobile_nav_bar}>
-        <a className={classes.mobile_nav_link} href="#home">
-          Home
-        </a>
-        <a className={classes.mobile_nav_link} href="#about">
-          About
-        </a>
-        <a className={classes.mobile_nav_link} href="#services">
-          Services
-        </a>
-        <a className={classes.mobile_nav_link} href="#contact-us-page">
-          Contact
-        </a>
-      </div>
+      {menuIsShown && (
+        <div className={classes.mobile_nav_bar}>
+          <span
+            className={classes.mobile_nav_link}
+            onClick={() => (navigate("/"), handleShowMenu())}
+          >
+            Home
+          </span>
+          <a
+            className={classes.mobile_nav_link}
+            onClick={handleShowMenu}
+            href="#about"
+          >
+            About
+          </a>
+          <a
+            className={classes.mobile_nav_link}
+            onClick={handleShowMenu}
+            href="#services"
+          >
+            Services
+          </a>
+          <a
+            className={classes.mobile_nav_link}
+            onClick={handleShowMenu}
+            href="#contact-us-page"
+          >
+            Contact
+          </a>
+        </div>
+      )}
       {/* END OF SIDE NAV BAR  */}
     </>
   );
