@@ -1,0 +1,20 @@
+.learn-more-image {
+  width: clamp(25rem, 15vw + 15rem, 40rem);
+  float: left;
+  margin: 0 1.5rem 0.5rem 0;
+}
+.learn-more-text {
+  font-size: var(--fs-400);
+}
+.learn-more-text ul {
+  list-style-position: inside;
+}
+.learn-more-header {
+  font-size: var(--fs-600);
+}
+@media (max-width: 40em) {
+  .learn-more-image {
+    float: none;
+    width: 100%;
+  }
+}

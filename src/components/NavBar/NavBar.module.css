@@ -1,0 +1,111 @@
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-400);
+  padding-inline: min(5%, 10rem);
+  padding-block: 1rem;
+  height: 10vh;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.logo > img {
+  width: 4.5rem;
+}
+.logo > p {
+  color: var(--light-color);
+  font-weight: 600;
+  font-size: var(--fs-400);
+}
+
+.nav_links {
+  display: flex;
+  gap: 2rem;
+  font-weight: normal;
+}
+
+.nav_link {
+  text-decoration: none;
+  font-size: var(--fs-400);
+  color: var(--light-color);
+  position: relative;
+}
+.nav_link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in;
+}
+.nav_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.menu_icon {
+  display: none;
+  font-size: 2.5rem;
+  color: var(--light-color);
+  cursor: pointer;
+}
+
+.mobile_nav_bar {
+  display: none;
+  flex-direction: column;
+  z-index: 7;
+  background-color: hsla(0, 0%, 90%);
+  height: 100vh;
+  width: clamp(15em, 25% + 10vw, 20em);
+  position: fixed;
+  right: -20em;
+  top: 7rem;
+}
+.mobile_nav_link {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-size: 1.2em;
+  padding: 1.2em;
+  position: relative;
+  font-size: var(--fs-400);
+}
+
+.slide {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.overlay {
+  position: absolute;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+/* MEDIA-QUERY FOR THE HAMBURGER NAV OR SLIDENAV */
+@media (max-width: 850px) {
+  .logo > img {
+    width: 3rem;
+  }
+  .nav_links {
+    display: none;
+  }
+  .menu_icon {
+    display: inline-block;
+  }
+  .mobile_nav_bar {
+    display: flex;
+  }
+}
