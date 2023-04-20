@@ -1,9 +1,9 @@
 import "./index.css";
 
+import { LandingPage, LearnMore } from "./pages";
 import { Route, Routes } from "react-router-dom";
 
-import LandingPage from "./pages/LandingPage/LandingPage";
-import LearnMore from "./pages/LearnMore/LearnMore";
+import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/:id" element={<LearnMore />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
