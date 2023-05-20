@@ -28,13 +28,25 @@ const NavBar = () => {
           <span className={classes.nav_link} onClick={() => navigate("/")}>
             Home
           </span>
-          <a className={classes.nav_link} href="#about">
+          <a
+            className={classes.nav_link}
+            onClick={() => navigate("/")}
+            href="#about"
+          >
             About
           </a>
-          <a className={classes.nav_link} href="#services">
+          <a
+            className={classes.nav_link}
+            onClick={() => navigate("/")}
+            href="#services"
+          >
             Services
           </a>
-          <a className={classes.nav_link} href="#contact-us-page">
+          <a
+            className={classes.nav_link}
+            onClick={() => navigate("/")}
+            href="#contact-us-page"
+          >
             Contact
           </a>
         </div>

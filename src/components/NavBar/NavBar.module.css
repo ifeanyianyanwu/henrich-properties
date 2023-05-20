@@ -5,7 +5,9 @@
   font-size: var(--fs-400);
   padding-inline: min(5%, 10rem);
   padding-block: 1rem;
-  height: 10vh;
+  height: 15vh;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
@@ -15,6 +17,7 @@
   text-decoration: none;
   cursor: pointer;
   z-index: 10;
+  position: relative;
 }
 .logo > img {
   width: 4.5rem;
@@ -115,6 +118,9 @@
 
 /* MEDIA-QUERY FOR THE HAMBURGER NAV OR SLIDENAV */
 @media (max-width: 850px) {
+  .nav_bar {
+    height: 10vh;
+  }
   .logo > img {
     width: 3rem;
   }

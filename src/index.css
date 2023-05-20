@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 /* ===============
     Global Styles
@@ -37,10 +37,11 @@ body::-webkit-scrollbar {
   --light-color: #ffff;
   --dark-color: #000000;
   --grey-color: #404040;
+  --light-grey-color: #e6e6e6;
   --fs-400: 1.4rem;
   --fs-600: 1.6rem;
   --fs-800: 2.2rem;
-  --fs-xl: clamp(4rem, 10vw + 1rem, 7rem);
+  --fs-xl: clamp(3rem, 10vw + 1rem, 6rem);
 }
 
 @media (min-width: 45em) {
@@ -62,13 +63,22 @@ h4,
 p {
   margin-block: 1rem;
 }
+h4 ~ p {
+  margin-top: 0rem !important;
+}
+a {
+  text-decoration: none;
+}
 
 .App {
-  height: 100vh;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   /* color: var(--light-color); */
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(./assets/homepagedark.jpg);
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }

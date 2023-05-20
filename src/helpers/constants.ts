@@ -1,3 +1,7 @@
+import CommercialDev from "../assets/Commercial-Development.png";
+import RetailDev from "../assets/Retail-Development.jpg";
+import ResidentialDev from "../assets/Residential-Development.jpg";
+
 export type DataItem = {
   id: string;
   heading: string;
@@ -15,9 +19,9 @@ type Data = DataItem[];
 
 export const WHY_CHOOSE_US_DATA: Data = [
   {
-    id: "Commercial Development",
+    id: "Commercial-Development",
     heading: "Commercial Development",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: CommercialDev,
     paragraphs: [
       {
         text: "Henrich Properties Limited commercial developments include some of the finest and most desirable office properties and its landmark construction of a shopping mall in the Federal Capital Territory. Each property is meticulously maintained and features the latest amenities and services. As a result, the company continues to attract and retain a distinguished and growing roster of tenants.",
@@ -30,7 +34,7 @@ export const WHY_CHOOSE_US_DATA: Data = [
         bulletPoints: [
           { point: "Property Development and Investment" },
           { point: "Project Aqcuisition and Management" },
-          { point: "PProject Marketing and Sales." },
+          { point: "Project Marketing and Sales." },
         ],
       },
       {
@@ -41,9 +45,9 @@ export const WHY_CHOOSE_US_DATA: Data = [
       "Henrich Properties Limited commercial developments include some of the finest and most desirable office properties and its landmark construction of a shopping mall in the Federal Capital Territory.",
   },
   {
-    id: "Retail Development",
+    id: "Retail-Development",
     heading: "Retail Development",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: RetailDev,
     paragraphs: [
       {
         text: "Henrich Properties Limited retail centers, which are among the most successful in the region, incorporate high-quality design, attractive high-traffic locations and the right mix of retail tenants. Tenants include well-known national chains, as well as respected local retailers.",
@@ -62,9 +66,9 @@ export const WHY_CHOOSE_US_DATA: Data = [
       "Henrich Properties Limited retail centers, which are among the most successful in the region, incorporate high-quality design, attractive high-traffic locations and the right mix of retail tenants.",
   },
   {
-    id: "Residential Development",
+    id: "Residential-Development",
     heading: "Residential Development",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: ResidentialDev,
     paragraphs: [
       {
         text: "Henrich Properties Limited has developed and sold dozens of high-end luxury homes in some of Nigeria's most exclusive communities:",
