@@ -1,7 +1,11 @@
 .section {
   scroll-margin-top: 15vh;
 }
-
+@media (max-width: 850px) {
+  .section {
+    scroll-margin-top: 10vh;
+  }
+}
 .white-background {
   background-color: var(--light-color);
 }
