@@ -1,6 +1,3 @@
-.bg_white {
-  background-color: var(--light-color);
-}
 .about_row {
   display: flex;
   flex-direction: column-reverse;
