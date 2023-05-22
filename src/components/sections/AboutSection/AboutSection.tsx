@@ -1,12 +1,11 @@
-import React from "react";
 import classes from "./AboutSection.module.css";
-import { Container } from "../../ui";
 import AboutImgOne from "../../../assets/aboutimage1.jpg";
 import AboutImgTwo from "../../../assets/aboutimage2.jpg";
+import { Section, Container } from "../../../layout";
 
 const AboutSection = () => {
   return (
-    <section id="about" className={classes.bg_white}>
+    <Section id="about" background="white">
       <Container className={classes.about_row}>
         <div className={classes.about_text}>
           <p>About</p>
@@ -42,7 +41,7 @@ const AboutSection = () => {
           />
         </div>
       </Container>
-    </section>
+    </Section>
   );
 };
 
