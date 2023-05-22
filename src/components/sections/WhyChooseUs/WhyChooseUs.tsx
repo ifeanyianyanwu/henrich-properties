@@ -1,11 +1,12 @@
 import React from "react";
 import { WHY_CHOOSE_US_DATA } from "../../../helpers/constants";
-import { Card, Container } from "../../ui";
+import { Card } from "../../ui";
 import classes from "./WhyChooseUs.module.css";
+import { Section, Container } from "../../../layout";
 
 const WhyChooseUs = () => {
   return (
-    <section className={classes.section_container}>
+    <Section background="grey" id="why-choose-us">
       <Container>
         <div className={classes.title_container}>
           <p>Why choose us?</p>
@@ -27,7 +28,7 @@ const WhyChooseUs = () => {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 };
 
