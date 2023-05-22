@@ -1,0 +1,13 @@
+.section {
+  scroll-margin-top: 15vh;
+}
+
+.white-background {
+  background-color: var(--light-color);
+}
+.blue-background {
+  background-color: var(--primary-color);
+}
+.grey-background {
+  background-color: var(--light-grey-color);
+}
