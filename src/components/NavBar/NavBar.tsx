@@ -1,29 +1,74 @@
 import { HiMenu, HiX } from "react-icons/hi";
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 
 import DarkLogo from "../../assets/logo_dark.png";
 import Logo from "../../assets/logo_header.png";
 import classes from "./NavBar.module.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { createPortal } from "react-dom";
+
+type Element = HTMLElement | DocumentFragment;
 
 const NavBar = () => {
+  //mobile menu state
   const [menuIsShown, setMenuIsShown] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleShowMenu = () => {
     setMenuIsShown((prev) => !prev);
   };
-  return (
-    <>
-      <nav className={classes.nav_bar}>
-        <span onClick={() => navigate("/")} className={classes.logo}>
-          <img src={menuIsShown ? DarkLogo : Logo} alt="Logo" />
-          <p style={{ color: `${menuIsShown ? "black" : "white"}` }}>
-            Henrich Properties LTD.
-          </p>
-        </span>
 
+  //this variable represents the DOM node with the id navigation
+  //it is used to portal the NavBar component to the DOM as a direct child of the body element
+  const menu: Element = document.getElementById("navigation") as Element;
+
+  //this variable represents the DOM node with the class nav-bar
+  //it is used to portal the Mobile Nav Bar element to the DOM as a direct child of the body element
+  const navBar: Element = document.querySelector(".nav-bar") as Element;
+
+  //this effect is triggered whenever the value of "menuIsShown" changes.
+  //it is responsible for adding or removing a CSS Class from the body element
+  useEffect(() => {
+    if (menuIsShown) {
+      document.body.classList.add("body-no-scroll");
+    } else {
+      document.body.classList.remove("body-no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("body-no-scroll");
+    };
+  }, [menuIsShown]);
+
+  useEffect(() => {
+    setMenuIsShown(false);
+  }, [location]);
+
+  const logo = (
+    <span onClick={() => navigate("/")} className={classes.logo}>
+      <img src={menuIsShown ? DarkLogo : Logo} alt="Logo" />
+      <p style={{ color: `${menuIsShown ? "black" : "white"}` }}>
+        Henrich Properties LTD.
+      </p>
+    </span>
+  );
+
+  const menuIcon = menuIsShown ? (
+    <HiX
+      className={classes.menu_icon}
+      style={{ color: "black" }}
+      onClick={handleShowMenu}
+    />
+  ) : (
+    <HiMenu className={classes.menu_icon} onClick={handleShowMenu} />
+  );
+
+  return createPortal(
+    <>
+      <>
+        {logo}
         <div className={classes.nav_links}>
           <span className={classes.nav_link} onClick={() => navigate("/")}>
             Home
@@ -50,51 +95,50 @@ const NavBar = () => {
             Contact
           </a>
         </div>
-        {menuIsShown ? (
-          <HiX
-            className={classes.menu_icon}
-            style={{ color: "black" }}
-            onClick={handleShowMenu}
-          />
-        ) : (
-          <HiMenu className={classes.menu_icon} onClick={handleShowMenu} />
-        )}
-      </nav>
+        {menuIcon}
+      </>
 
       {/* MOBILE NAV BAR */}
-      {menuIsShown && (
-        <div className={classes.mobile_nav_bar}>
-          <span
-            className={classes.mobile_nav_link}
-            onClick={() => (navigate("/"), handleShowMenu())}
-          >
-            Home
-          </span>
-          <a
-            className={classes.mobile_nav_link}
-            onClick={handleShowMenu}
-            href="#about"
-          >
-            About
-          </a>
-          <a
-            className={classes.mobile_nav_link}
-            onClick={handleShowMenu}
-            href="#services"
-          >
-            Services
-          </a>
-          <a
-            className={classes.mobile_nav_link}
-            onClick={handleShowMenu}
-            href="#contact-us-page"
-          >
-            Contact
-          </a>
-        </div>
-      )}
+      {menuIsShown &&
+        createPortal(
+          <div className={classes.mobile_nav_bar}>
+            <div className={classes.menu_nav}>
+              {logo}
+              {menuIcon}
+            </div>
+            <span
+              className={classes.mobile_nav_link}
+              onClick={() => (navigate("/"), handleShowMenu())}
+            >
+              Home
+            </span>
+            <a
+              className={classes.mobile_nav_link}
+              onClick={() => (navigate("/"), handleShowMenu())}
+              href="#about"
+            >
+              About
+            </a>
+            <a
+              className={classes.mobile_nav_link}
+              onClick={() => (navigate("/"), handleShowMenu())}
+              href="#services"
+            >
+              Services
+            </a>
+            <a
+              className={classes.mobile_nav_link}
+              onClick={() => (navigate("/"), handleShowMenu())}
+              href="#contact-us-page"
+            >
+              Contact
+            </a>
+          </div>,
+          menu
+        )}
       {/* END OF SIDE NAV BAR  */}
-    </>
+    </>,
+    navBar
   );
 };
 
