@@ -1,0 +1,5 @@
+.container {
+  margin-inline: auto;
+  width: min(90%, 110rem);
+  padding-block: min(8%, 5rem);
+}
