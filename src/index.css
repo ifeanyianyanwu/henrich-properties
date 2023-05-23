@@ -34,7 +34,8 @@ body::-webkit-scrollbar {
 }
 
 :root {
-  --primary-color: #193e79;
+  --primary-color: #17254f;
+  /* --primary-color: #193e79; */
   --light-color: #ffff;
   --dark-color: #000000;
   --grey-color: #404040;
@@ -93,7 +94,7 @@ a {
   height: 15vh;
   position: sticky;
   top: 0;
-  background-color: #0f0f21;
+  background-color: var(--primary-color);
   z-index: 10;
 }
 @media (max-width: 850px) {
