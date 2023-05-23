@@ -9,9 +9,10 @@ type IProps = {
   heading: string;
   text: string;
   className?: string;
+  no_btn?: boolean;
 };
 
-const Card = ({ id, imgUrl, heading, text, className }: IProps) => {
+const Card = ({ id, imgUrl, heading, text, className, no_btn }: IProps) => {
   const navigate = useNavigate();
 
   const handleClick = (id: string) => {
@@ -22,9 +23,11 @@ const Card = ({ id, imgUrl, heading, text, className }: IProps) => {
       <img loading="lazy" src={imgUrl} alt={`${heading} Image`} />
       <h4>{heading}</h4>
       <p>{text}</p>
-      <Button onClick={() => handleClick(id)} className={classes.button}>
-        Learn more
-      </Button>
+      {no_btn ? null : (
+        <Button onClick={() => handleClick(id)} className={classes.button}>
+          Learn more
+        </Button>
+      )}
     </div>
   );
 };
