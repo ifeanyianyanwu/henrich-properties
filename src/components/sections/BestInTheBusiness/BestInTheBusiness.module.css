@@ -1,0 +1,38 @@
+.title_container {
+  max-width: 43rem;
+  margin-inline: auto;
+  text-align: center;
+  color: var(--light-color);
+}
+.title_container h2 {
+  font-size: var(--fs-800);
+  max-width: 43rem;
+  margin-inline: auto;
+}
+.title_container p {
+  font-size: var(--fs-400);
+}
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.card {
+  color: var(--light-color);
+  box-shadow: none;
+}
+.card img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+}
+.card h4 {
+  text-align: center;
+}
+.card p {
+  color: var(--light-color);
+  text-align: center;
+}
