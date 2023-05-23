@@ -4,7 +4,7 @@ import { SERVICES_DATA, WHY_CHOOSE_US_DATA } from "../../helpers/constants";
 import type { DataItem } from "../../helpers/constants";
 import classes from "./LearnMore.module.css";
 import { useParams, useNavigate } from "react-router-dom";
-import { Container } from "../../components/ui";
+import { Container } from "../../layout";
 
 const LearnMore = () => {
   const [item, setItem] = useState<DataItem>();
