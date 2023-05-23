@@ -1,6 +1,13 @@
+//Why choose us Images import
 import CommercialDev from "../assets/Commercial-Development.png";
 import RetailDev from "../assets/Retail-Development.jpg";
 import ResidentialDev from "../assets/Residential-Development.jpg";
+
+//Best in the business Images import
+import MissionStatement from "../assets/mission-modified.png";
+import CoreValues from "../assets/core-values-modified.png";
+import Deliverables from "../assets/deliverables-modified.png";
+import Vision from "../assets/vision-modified.png";
 
 export type DataItem = {
   id: string;
@@ -253,25 +260,25 @@ export type BestInBusinessItem = {
 export const BEST_IN_THE_BUSINESS_DATA: BestInBusiness = [
   {
     id: "Mission Statement",
-    image_url: "",
+    image_url: MissionStatement,
     title: "Mission Statement",
     text: "To provide exceptional service and quality products to our clients and to follow through on our promises.",
   },
   {
     id: "Core Values",
-    image_url: "",
+    image_url: CoreValues,
     title: "Core Values",
     text: "People , Quality , Entrepreneurship, Customer , Focus and Integrity",
   },
   {
     id: "Deliverables",
-    image_url: "",
+    image_url: Deliverables,
     title: "Deliverables",
     text: "We are versatile in implementing effective ideas to help clients gain an absolute competitive edge with integrated marketing service.",
   },
   {
     id: "Vision",
-    image_url: "",
+    image_url: Vision,
     title: "Vision",
     text: "To offer our customers superior craftsmanship and integrity in all products and services offered.",
   },
