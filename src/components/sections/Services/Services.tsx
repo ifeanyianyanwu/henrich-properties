@@ -44,15 +44,6 @@ const Services = () => {
             </CarouselItem>
           ))}
         </Carousel>
-        {/* </div> */}
-
-        {/* <button className="button-next button" onClick={handleNextSlide}>
-            ❯
-          </button>
-          <button className="button-prev button" onClick={handlePrevSlide}>
-            ❮
-          </button>
-        </div> */}
       </Container>
     </Section>
   );

@@ -2,6 +2,7 @@
   max-width: 43rem;
   margin-inline: auto;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .title_container h2 {
   font-size: var(--fs-800);
@@ -12,24 +13,8 @@
   font-size: var(--fs-400);
   color: var(--grey-color);
 }
-/* .carousel { */
-/* display: flex;
-  overflow-x: scroll;
-  gap: 1.5rem; */
-/* justify-content: center; */
-/* scroll-snap-type: x mandatory; */
-/* position: relative;
-  overflow: hidden; */
-/* } */
-/* .slider {
-  display: flex;
-  transition: transform 0.5s ease;
-  gap: 1.4rem;
-} */
 .card {
-  /* flex: 0 0 35.5rem; */
   background-color: var(--light-color);
   height: 100%;
   margin-block: 0;
-  /* scroll-snap-align: center; */
 }
