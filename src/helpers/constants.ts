@@ -9,6 +9,13 @@ import CoreValues from "../assets/core-values-modified.png";
 import Deliverables from "../assets/deliverables-modified.png";
 import Vision from "../assets/vision-modified.png";
 
+//Services Images import
+import BusinessConsulting from "../assets/Business Consulting.jpg";
+import FinancialAdvisory from "../assets/unnamed.jpg";
+import EnergyServives from "../assets/Energy-Services.jpg";
+import AssetValuation from "../assets/Property Managment.jpg";
+import CoperateIdentity from "../assets/Branding and Corporate Identity.jpg";
+
 export type DataItem = {
   id: string;
   heading: string;
@@ -117,7 +124,7 @@ export const SERVICES_DATA: Data = [
   {
     id: "Business Consulting",
     heading: "Business Consulting",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: BusinessConsulting,
     paragraphs: [
       {
         text: "Henrich Properties Limited helps business services provides competitive advantage in a market focused on delivering both exceptional service to end customers and attractive ROI to shareholders. The business services sector is exploiting opportunities driven by globalization, consolidation and new technology. And new integrated offerings are forcing established players to develop scalable services that satisfy evolving regulatory and environmental standards. New technology platforms are also driving lower-cost models that are disruptive to incumbent businesses, but provide opportunities for new entrants and active players.",
@@ -138,7 +145,7 @@ export const SERVICES_DATA: Data = [
   {
     id: "Finacial Advisory",
     heading: "Finacial Advisory",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: FinancialAdvisory,
     paragraphs: [
       {
         text: "At Henrich Properties Limited, Our hallmark is building relationships based on your individual needs and on our professional expertise and personal service. Finance is a means to an end, not an end in itself. We are committed to helping you achieve your financial goals so that you can focus your attention on all of the other aspects of your life.",
@@ -156,7 +163,7 @@ export const SERVICES_DATA: Data = [
   {
     id: "Energy Services",
     heading: "Energy Services",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: EnergyServives,
     paragraphs: [
       {
         text: "The energy industry faces considerable challenges as global demand continues to place the world's scarce natural resources under unrelenting pressure. Companies from across the energy value chain also have to adapt to a raft of new regulations and technologies.",
@@ -177,7 +184,7 @@ export const SERVICES_DATA: Data = [
   {
     id: "Property/facility Management & Asset Valuation",
     heading: "Property/facility Management & Asset Valuation",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: AssetValuation,
     paragraphs: [
       {
         text: "We render professional services in the following broad facets of Estate Surveying and Valuation:",
@@ -225,7 +232,7 @@ export const SERVICES_DATA: Data = [
   {
     id: "Branding and Corporate Identity",
     heading: "Branding and Corporate Identity",
-    image_url: "../assets/homepagedark.jpg",
+    image_url: CoperateIdentity,
     paragraphs: [
       {
         text: "The most critical element for creating a successful communication trategy is having clarity of brand. It is the foundation. Without brand clarity, it is difficult to create engaging strategies that move your target audience to action in relevant, distinctive, consistent, and repeatable ways.",
