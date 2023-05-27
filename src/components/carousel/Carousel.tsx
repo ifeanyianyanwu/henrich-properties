@@ -24,7 +24,7 @@ const Carousel = ({ children }: IProps) => {
       setTranslateWidth(100);
       setIndexVal(0);
     }
-  }, []);
+  }, [width]);
 
   const updateIndex = (newIndex: number) => {
     if (newIndex < 0) {
