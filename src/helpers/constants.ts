@@ -16,6 +16,32 @@ import EnergyServives from "../assets/Energy-Services.jpg";
 import AssetValuation from "../assets/Property Managment.jpg";
 import CoperateIdentity from "../assets/Branding and Corporate Identity.jpg";
 
+//Our Works Images Import
+import ImageOne from "../assets/Henrich-Properties-changing images(1)/Project 1.1.jpeg";
+import ImageTwo from "../assets/Henrich-Properties-changing images(1)/Project 1.2.jpeg";
+import ImageThree from "../assets/Henrich-Properties-changing images(1)/Project 1.3.jpeg";
+import ImageFour from "../assets/Henrich-Properties-changing images(1)/Project 1.4.jpeg";
+import ImageFive from "../assets/Henrich-Properties-changing images(1)/Project 1.5.jpeg";
+import ImageSix from "../assets/Henrich-Properties-changing images(1)/Project 1.6.jpeg";
+import ImageSeven from "../assets/Henrich-Properties-changing images(1)/Project 2.jpeg";
+import ImageEight from "../assets/Henrich-Properties-changing images(1)/Project 3.jpeg";
+import ImageNine from "../assets/Henrich-Properties-changing images(1)/Project 3.1.jpeg";
+import ImageTen from "../assets/Henrich-Properties-changing images(1)/Project 4.jpeg";
+import ImageEleven from "../assets/Henrich-Properties-changing images(1)/Project 5.jpeg";
+import ImageTwelve from "../assets/Henrich-Properties-changing images(1)/Project 5.1.jpeg";
+import ImageThirteen from "../assets/Henrich-Properties-changing images(1)/Project 6.1.jpeg";
+import ImageFourteen from "../assets/Henrich-Properties-changing images(1)/Project 6.2.jpeg";
+import ImageFiveteen from "../assets/Henrich-Properties-changing images(1)/Project 6.3.jpeg";
+import ImageSixteen from "../assets/Henrich-Properties-changing images(1)/Project 6.4.jpeg";
+import ImageSeventeen from "../assets/Henrich-Properties-changing images(1)/Project 6.5.jpeg";
+import ImageEighteen from "../assets/Henrich-Properties-changing images(1)/Project 6.6.jpeg";
+import ImageNineteen from "../assets/Henrich-Properties-changing images(1)/Project 6.7.jpeg";
+import ImageTwenty from "../assets/Henrich-Properties-changing images(1)/Project 6.8.jpeg";
+import ImageTwentyOne from "../assets/Henrich-Properties-changing images(1)/Project 6.9.jpeg";
+import ImageTwentyTwo from "../assets/Henrich-Properties-changing images(1)/Project 6.10.jpeg";
+import ImageTwentyThree from "../assets/Henrich-Properties-changing images(1)/Project 6.11.jpeg";
+import ImageTwentyFour from "../assets/Henrich-Properties-changing images(1)/Project 6.12.jpeg";
+
 export type DataItem = {
   id: string;
   heading: string;
@@ -289,4 +315,33 @@ export const BEST_IN_THE_BUSINESS_DATA: BestInBusiness = [
     title: "Vision",
     text: "To offer our customers superior craftsmanship and integrity in all products and services offered.",
   },
+];
+
+type OurWork = { img_url: string }[];
+
+export const OUR_WORKS: OurWork = [
+  { img_url: ImageOne },
+  { img_url: ImageTwo },
+  { img_url: ImageThree },
+  { img_url: ImageFour },
+  { img_url: ImageFive },
+  { img_url: ImageSix },
+  { img_url: ImageSeven },
+  { img_url: ImageEight },
+  { img_url: ImageNine },
+  { img_url: ImageTen },
+  { img_url: ImageEleven },
+  { img_url: ImageTwelve },
+  { img_url: ImageThirteen },
+  { img_url: ImageFourteen },
+  { img_url: ImageFiveteen },
+  { img_url: ImageSixteen },
+  { img_url: ImageSeventeen },
+  { img_url: ImageEighteen },
+  { img_url: ImageNineteen },
+  { img_url: ImageTwenty },
+  { img_url: ImageTwentyOne },
+  { img_url: ImageTwentyTwo },
+  { img_url: ImageThree },
+  { img_url: ImageTwentyFour },
 ];
