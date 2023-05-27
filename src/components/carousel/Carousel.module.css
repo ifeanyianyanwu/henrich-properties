@@ -1,0 +1,34 @@
+.carousel_item {
+  flex-basis: 32.4%;
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+}
+@media (max-width: 940px) {
+  .carousel_item {
+    flex-basis: 49.5%;
+  }
+}
+@media (max-width: 680px) {
+  .carousel_item {
+    flex-basis: 100%;
+  }
+}
+
+.carousel_inner {
+  transition: transform 1s;
+  min-height: 100%;
+  display: flex;
+  gap: 1%;
+}
+@media (max-width: 680px) {
+  .carousel_inner {
+    gap: 0%;
+  }
+}
+.carousel_outer {
+  overflow: hidden;
+  position: relative;
+  /* min-height: 100%; */
+}
