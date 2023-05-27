@@ -1,0 +1,14 @@
+.title_container {
+  max-width: 43rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.title_container h2 {
+  font-size: var(--fs-800);
+  /* max-width: 43rem; */
+  margin-inline: auto;
+}
+.title_container p {
+  font-size: var(--fs-400);
+  color: var(--grey-color);
+}
