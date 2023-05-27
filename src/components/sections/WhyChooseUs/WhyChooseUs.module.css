@@ -20,6 +20,5 @@
 }
 .card {
   flex: 1 1 30rem;
-  /* flex: 0.35 1 34rem; */
   background-color: var(--light-color);
 }
