@@ -107,3 +107,9 @@ a {
 .body-no-scroll {
   overflow: hidden;
 }
+
+.slick-next::before,
+.slick-prev::before {
+  color: var(--primary-color) !important;
+  font-size: var(--fs-600) !important;
+}
