@@ -1,5 +1,5 @@
-import Footer from "./Footer/Footer";
-import NavBar from "./NavBar/NavBar";
-import Contact from "./Contact/Contact";
+import Footer from "./footer/Footer";
+import NavBar from "./navbar/NavBar";
+import Contact from "./contact/Contact";
 
 export { Footer, NavBar, Contact };
