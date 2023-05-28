@@ -1,4 +1,4 @@
 import Section from "./section/Section";
-import Container from "./Container/Container";
+import Container from "./container/Container";
 
 export { Section, Container };
