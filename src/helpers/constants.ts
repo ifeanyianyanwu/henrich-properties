@@ -166,7 +166,7 @@ export const SERVICES_DATA: Data = [
       },
     ],
     summary_text:
-      "Henrich Properties Limited helps business services provides competitive advantage in a market focused on delivering both exceptional service to end customers and attractive ROI to shareholders.",
+      "We help business services provide competitive advantage in a market focused on delivering both exceptional service to customers and attractive ROI to shareholders.",
   },
   {
     id: "Finacial Advisory",

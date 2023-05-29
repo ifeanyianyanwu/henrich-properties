@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
             We offer expertise in Commercial, Retail and Residential Development
           </p>
         </div>
-        <div className={classes.why_choose_us_cards_container}>
+        <div className={classes.card_container}>
           {WHY_CHOOSE_US_DATA.map((item) => (
             <Card
               key={item.id}
