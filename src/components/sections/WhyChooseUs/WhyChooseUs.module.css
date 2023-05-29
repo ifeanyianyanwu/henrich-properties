@@ -12,7 +12,7 @@
   font-size: var(--fs-400);
   color: var(--grey-color);
 }
-.why_choose_us_cards_container {
+.card_container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
