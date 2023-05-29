@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Section } from "../../../layout";
 import classes from "./Services.module.css";
 import { SERVICES_DATA } from "../../../helpers/constants";
@@ -7,16 +7,12 @@ import Carousel from "../../carousel/Carousel";
 import CarouselItem from "../../carousel/CarouselItem";
 
 const Services = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const width = window.innerWidth;
+  const [screenWidth, setScreenWidth] = useState(0);
 
-  const handleNextSlide = () => {
-    // if (currentSlide > SERVICES_DATA.length) return;
-    setCurrentSlide((prevSlide) => prevSlide + 1);
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prevSlide) => prevSlide - 1);
-  };
+  useEffect(() => {
+    setScreenWidth(width);
+  }, [width]);
 
   return (
     <Section background="grey" id="services">
@@ -29,10 +25,24 @@ const Services = () => {
             anyone, think of us.
           </p>
         </div>
-
-        <Carousel>
-          {SERVICES_DATA.map((item) => (
-            <CarouselItem key={item.id}>
+        {screenWidth > 940 ? (
+          <Carousel>
+            {SERVICES_DATA.map((item) => (
+              <CarouselItem key={item.id}>
+                <Card
+                  key={item.id}
+                  id={item.id}
+                  imgUrl={item.image_url}
+                  text={item.summary_text}
+                  heading={item.heading}
+                  className={classes.card}
+                />
+              </CarouselItem>
+            ))}
+          </Carousel>
+        ) : (
+          <div className={classes.card_container}>
+            {SERVICES_DATA.map((item) => (
               <Card
                 key={item.id}
                 id={item.id}
@@ -41,9 +51,9 @@ const Services = () => {
                 heading={item.heading}
                 className={classes.card}
               />
-            </CarouselItem>
-          ))}
-        </Carousel>
+            ))}
+          </div>
+        )}
       </Container>
     </Section>
   );
