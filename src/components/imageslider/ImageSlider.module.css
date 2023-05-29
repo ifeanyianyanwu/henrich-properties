@@ -17,27 +17,25 @@
   position: relative;
   /* min-height: 100%; */
 }
-.prev_btn {
+.btn {
   position: absolute;
   top: 50%;
-  left: 1rem;
   transform: translateY(-50%);
   outline: none;
   border: none;
   padding: 0.8rem;
-  background: rgba(196, 190, 190, 0.758);
+  background: rgba(76, 74, 74, 0.562);
   backdrop-filter: blur(40px);
   cursor: pointer;
+  border-radius: 5px;
+}
+/* .btn:hover {
+  backdrop-filter: blur(10px);
+  background: rgba(196, 190, 190, 0.758);
+} */
+.prev_btn {
+  left: 1rem;
 }
 .next_btn {
-  position: absolute;
-  top: 50%;
   right: 1rem;
-  transform: translateY(-50%);
-  outline: none;
-  border: none;
-  padding: 0.8rem;
-  background: rgba(196, 190, 190, 0.758);
-  backdrop-filter: blur(40px);
-  cursor: pointer;
 }
