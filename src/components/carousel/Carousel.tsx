@@ -1,6 +1,7 @@
 import React, { ReactNode, useState, useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import classes from "./Carousel.module.css";
+import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 
 interface IProps {
   children: ReactNode;
@@ -11,7 +12,9 @@ const Carousel = ({ children }: IProps) => {
   const [translateWidth, setTranslateWidth] = useState<number>(0);
   const [indexVal, setIndexVal] = useState<number>(0);
 
-  const width = screen.width;
+  const style = { color: "white", fontSize: "24px" };
+
+  const width = window.innerWidth;
 
   useEffect(() => {
     if (width > 940) {
@@ -52,8 +55,20 @@ const Carousel = ({ children }: IProps) => {
       >
         {children}
       </div>
-      <button onClick={() => updateIndex(activeIndex - 1)}>previous</button>
-      <button onClick={() => updateIndex(activeIndex + 1)}>next</button>
+      <div className={classes.button_container}>
+        <button
+          onClick={() => updateIndex(activeIndex - 1)}
+          className={classes.button}
+        >
+          <HiOutlineArrowSmLeft style={style} />
+        </button>
+        <button
+          onClick={() => updateIndex(activeIndex + 1)}
+          className={classes.button}
+        >
+          <HiOutlineArrowSmRight style={style} />
+        </button>
+      </div>
     </div>
   );
 };
