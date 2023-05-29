@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import { Footer, Contact } from "../../components";
 import {
   AboutSection,
   BestInTheBusiness,
@@ -33,8 +32,6 @@ const LandingPage = () => {
       <BestInTheBusiness />
       <Services />
       <OurWorks />
-      <Contact />
-      <Footer />
     </div>
   );
 };
