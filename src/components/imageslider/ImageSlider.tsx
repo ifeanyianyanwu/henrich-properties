@@ -41,7 +41,7 @@ const ImageSlider = ({ children }: IProps) => {
       </div>
       <button
         onClick={() => updateIndex(activeIndex - 1)}
-        className={classes.prev_btn}
+        className={`${classes.prev_btn} ${classes.btn}`}
       >
         <HiOutlineChevronDoubleLeft
           style={{ fontSize: "20px", color: "white" }}
@@ -49,7 +49,7 @@ const ImageSlider = ({ children }: IProps) => {
       </button>
       <button
         onClick={() => updateIndex(activeIndex + 1)}
-        className={classes.next_btn}
+        className={`${classes.next_btn} ${classes.btn}`}
       >
         <HiOutlineChevronDoubleRight
           style={{ fontSize: "20px", color: "white" }}
