@@ -30,5 +30,29 @@
 .carousel_outer {
   overflow: hidden;
   position: relative;
-  /* min-height: 100%; */
+}
+@media (max-width: 768px) {
+  .carousel_outer {
+    overflow: scroll;
+  }
+}
+.button_container {
+  margin-top: 2rem;
+  display: flex;
+  padding-inline: 1rem;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .button_container {
+    display: none;
+  }
+}
+.button {
+  display: grid;
+  place-content: center;
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  outline: none;
+  border: none;
 }
