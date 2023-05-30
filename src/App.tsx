@@ -3,6 +3,8 @@ import "./index.css";
 import { Footer, NavBar } from "./components";
 import { LandingPage, LearnMore, NotFound } from "./pages";
 import { Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   return (
