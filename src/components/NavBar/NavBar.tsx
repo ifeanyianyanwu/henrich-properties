@@ -24,10 +24,6 @@ const NavBar = () => {
   //it is used to portal the NavBar component to the DOM as a direct child of the body element
   const menu: Element = document.getElementById("navigation") as Element;
 
-  //this variable represents the DOM node with the class nav-bar
-  //it is used to portal the Mobile Nav Bar element to the DOM as a direct child of the body element
-  const navBar: Element = document.querySelector(".nav-bar") as Element;
-
   //this effect is triggered whenever the value of "menuIsShown" changes.
   //it is responsible for adding or removing a CSS Class from the body element
   useEffect(() => {
@@ -65,9 +61,9 @@ const NavBar = () => {
     <HiMenu className={classes.menu_icon} onClick={handleShowMenu} />
   );
 
-  return createPortal(
+  return (
     <>
-      <>
+      <div className={classes.nav_bar} id="nav-bar">
         {logo}
         <div className={classes.nav_links}>
           <span className={classes.nav_link} onClick={() => navigate("/")}>
@@ -96,7 +92,7 @@ const NavBar = () => {
           </a>
         </div>
         {menuIcon}
-      </>
+      </div>
 
       {/* MOBILE NAV BAR */}
       {menuIsShown &&
@@ -137,8 +133,7 @@ const NavBar = () => {
           menu
         )}
       {/* END OF SIDE NAV BAR  */}
-    </>,
-    navBar
+    </>
   );
 };
 

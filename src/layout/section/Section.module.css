@@ -1,5 +1,20 @@
 .section {
   scroll-margin-top: 12vh;
+  /* transform: translateX(100%); */
+}
+
+.right > * {
+  transform: translateX(100%);
+  transition: all 1s ease;
+}
+.left > * {
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+.right.visible > *,
+.left.visible > * {
+  transform: translateX(0);
+  /* opacity: 1; */
 }
 @media (max-width: 850px) {
   .section {

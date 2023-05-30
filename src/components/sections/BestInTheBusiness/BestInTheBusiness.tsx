@@ -5,7 +5,7 @@ import { Card } from "../../ui";
 
 const BestInTheBusiness = () => {
   return (
-    <Section background="blue" id="best-in-the-business">
+    <Section background="blue" id="best-in-the-business" direction="right">
       <Container>
         <div className={classes.title_container}>
           <p>Best in the business</p>

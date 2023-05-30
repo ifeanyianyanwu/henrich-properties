@@ -6,7 +6,7 @@ import ImageSliderItem from "../../imageslider/ImageSliderItem";
 
 const OurWorks = () => {
   return (
-    <Section id="our-works" background="white">
+    <Section id="our-works" background="white" direction="right">
       <Container>
         <div className={classes.title_container}>
           <p>Our Works</p>

@@ -1,3 +1,23 @@
+.nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fs-400);
+  padding-inline: min(5%, 10rem);
+  padding-block: 1rem;
+  height: 12vh;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: none;
+  transition: background-color 0.1s ease-in;
+}
+@media (max-width: 850px) {
+  .nav_bar {
+    height: 10vh;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;

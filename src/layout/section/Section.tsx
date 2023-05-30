@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import classes from "./Section.module.css";
 
 type BackGround = "grey" | "blue" | "white";
@@ -7,9 +8,23 @@ type IProps = {
   id: string;
   background: BackGround;
   children: ReactNode;
+  direction?: "left" | "right";
 };
 
-const Section = ({ id, background, children }: IProps) => {
+const Section = ({ id, background, children, direction }: IProps) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: "0px 0px -120px 0px",
+  });
+
+  // Handle the visibility change
+  useEffect(() => {
+    if (inView) {
+      setIsVisible(true);
+    }
+  }, [inView]);
+
   const colors = {
     grey: "grey-background",
     white: "white-background",
@@ -23,7 +38,16 @@ const Section = ({ id, background, children }: IProps) => {
   return (
     <section
       id={id}
-      className={`${classes.section} ${classes[getBackGround(background)]}`}
+      className={`${classes.section} ${classes[getBackGround(background)]}
+       ${isVisible ? classes.visible : ""} 
+       ${
+         direction === "right"
+           ? classes.right
+           : direction === "left"
+           ? classes.left
+           : ""
+       }`}
+      ref={ref}
     >
       {children}
     </section>

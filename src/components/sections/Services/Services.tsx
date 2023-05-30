@@ -15,7 +15,7 @@ const Services = () => {
   }, [width]);
 
   return (
-    <Section background="grey" id="services">
+    <Section background="grey" id="services" direction="left">
       <Container>
         <div className={classes.title_container}>
           <p>Services</p>

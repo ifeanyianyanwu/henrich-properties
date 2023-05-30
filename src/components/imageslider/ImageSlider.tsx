@@ -13,7 +13,7 @@ interface IProps {
 const ImageSlider = ({ children }: IProps) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  const style = {};
+  const style = { fontSize: "20px", color: "white" };
 
   const updateIndex = (newIndex: number) => {
     if (newIndex < 0) {
@@ -43,17 +43,13 @@ const ImageSlider = ({ children }: IProps) => {
         onClick={() => updateIndex(activeIndex - 1)}
         className={`${classes.prev_btn} ${classes.btn}`}
       >
-        <HiOutlineChevronDoubleLeft
-          style={{ fontSize: "20px", color: "white" }}
-        />
+        <HiOutlineChevronDoubleLeft style={style} />
       </button>
       <button
         onClick={() => updateIndex(activeIndex + 1)}
         className={`${classes.next_btn} ${classes.btn}`}
       >
-        <HiOutlineChevronDoubleRight
-          style={{ fontSize: "20px", color: "white" }}
-        />
+        <HiOutlineChevronDoubleRight style={style} />
       </button>
     </div>
   );

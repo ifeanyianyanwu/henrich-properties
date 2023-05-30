@@ -5,7 +5,7 @@ import { Section, Container } from "../../../layout";
 
 const AboutSection = () => {
   return (
-    <Section id="about" background="white">
+    <Section id="about" background="white" direction="right">
       <Container className={classes.about_row}>
         <div className={classes.about_text}>
           <p>About</p>

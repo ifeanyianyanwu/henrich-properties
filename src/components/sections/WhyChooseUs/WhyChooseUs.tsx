@@ -6,7 +6,7 @@ import { Section, Container } from "../../../layout";
 
 const WhyChooseUs = () => {
   return (
-    <Section background="grey" id="why-choose-us">
+    <Section background="grey" id="why-choose-us" direction="left">
       <Container>
         <div className={classes.title_container}>
           <p>Why choose us?</p>
