@@ -1,0 +1,38 @@
+.contact_title {
+  font-size: var(--fs-800);
+  margin-bottom: 2rem;
+  color: var(--light-color);
+}
+
+.contact_details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+@media (max-width: 620px) {
+  .contact_details {
+    flex-direction: column;
+  }
+}
+.contact_details h3 {
+  font-size: var(--fs-400);
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.contact_details p {
+  font-size: var(--fs-400);
+  color: var(--light-color);
+}
+.mail {
+  display: flex;
+  flex-direction: column;
+}
+.mail a {
+  font-size: var(--fs-400);
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--light-color);
+}
