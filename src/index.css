@@ -76,40 +76,18 @@ a {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow-y: auto;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(./assets/homepagedark.jpg);
   background-size: cover;
   background-attachment: fixed;
-  position: relative;
 }
 
-.nav-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: var(--fs-400);
-  padding-inline: min(5%, 10rem);
-  padding-block: 1rem;
-  height: 12vh;
-  position: sticky;
-  top: 0;
+/* this a class to handle back ground color change of the nav bar when the home page is out of view */
+.nav_bg {
   background-color: var(--primary-color);
-  z-index: 10;
-}
-@media (max-width: 850px) {
-  .nav-bar {
-    height: 10vh;
-  }
 }
 
 /* this a class to handle the prevention of scrolling on the body when the mobile navigation is open */
 .body-no-scroll {
   overflow: hidden;
-}
-
-.slick-next::before,
-.slick-prev::before {
-  color: var(--primary-color) !important;
-  font-size: var(--fs-600) !important;
 }
