@@ -83,7 +83,7 @@ a {
   background-attachment: fixed;
 }
 
-/* this a class to handle back ground color change of the nav bar when the home page is out of view */
+/* this a class to handle back ground color change of the nav bar when the home page is out of view. */
 .nav_bg {
   background-color: var(--primary-color);
 }
