@@ -80,7 +80,7 @@
   flex-direction: column;
   gap: 1rem;
   z-index: 20;
-  background: rgba(226, 220, 220, 0.43);
+  background: rgba(226, 220, 220, 0.884);
   backdrop-filter: blur(30px);
   position: fixed;
   inset: 0;

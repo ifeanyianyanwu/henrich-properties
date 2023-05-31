@@ -81,7 +81,6 @@ a {
     url(./assets/homepagedark.jpg);
   background-size: cover;
   background-attachment: fixed;
-  overflow-x: hidden;
 }
 
 /* this a class to handle back ground color change of the nav bar when the home page is out of view. */
