@@ -19,6 +19,14 @@ const LearnMore = () => {
     item ? setItem(item) : navigate("/404");
   }, []);
 
+  const element = document.getElementById("nav-bar");
+
+  useEffect(() => {
+    element?.classList.add("nav_bg");
+
+    return () => element?.classList.remove("nav_bg");
+  }, []);
+
   return (
     <section className={classes.page_container}>
       <Container>
@@ -31,10 +39,10 @@ const LearnMore = () => {
         <div className={classes["learn-more-text"]}>
           {item?.paragraphs.map((p, index): ReactNode => {
             return (
-              <>
+              <span key={index}>
                 <p key={index}>{p.text}</p>
                 {p.bulletPoints ? (
-                  <ul>
+                  <ul key={index}>
                     {p.bulletPoints
                       ? p.bulletPoints.map((bp, index) => (
                           <li key={index}>{bp.point}</li>
@@ -42,7 +50,7 @@ const LearnMore = () => {
                       : null}
                   </ul>
                 ) : null}
-              </>
+              </span>
             );
           })}
         </div>
