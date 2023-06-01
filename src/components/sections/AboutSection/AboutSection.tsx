@@ -2,12 +2,19 @@ import classes from "./AboutSection.module.css";
 import AboutImgOne from "../../../assets/aboutimage1.jpg";
 import AboutImgTwo from "../../../assets/aboutimage2.jpg";
 import { Section, Container } from "../../../layout";
+import { useIsVisible } from "../../../hooks/useIsVisible";
 
 const AboutSection = () => {
+  const { ref, isVisible } = useIsVisible();
+
   return (
-    <Section id="about" background="white" direction="right">
+    <Section id="about" background="white" direction="right" ref={ref}>
       <Container className={classes.about_row}>
-        <div className={classes.about_text}>
+        <div
+          className={`${classes.about_text}  ${
+            isVisible ? classes.appear : ""
+          }`}
+        >
           <p>About</p>
           <h2>A Home-Grown Success</h2>
           <p>
@@ -26,7 +33,9 @@ const AboutSection = () => {
             Development and Residential Development.
           </p>
         </div>
-        <div className={classes.about_img}>
+        <div
+          className={`${classes.about_img}  ${isVisible ? classes.appear : ""}`}
+        >
           <img
             loading="lazy"
             className={classes.about_img_1}
