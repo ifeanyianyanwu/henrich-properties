@@ -3,19 +3,27 @@
   /* transform: translateX(100%); */
 }
 
-.right > * {
+/* .right > * {
   transform: translateX(100%);
-  transition: all 1s ease;
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 .left > * {
   transform: translateX(-100%);
-  transition: all 1s ease;
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 .right.visible > *,
 .left.visible > * {
   transform: translateX(0);
-  /* opacity: 1; */
-}
+  opacity: 1;
+  filter: blur(0);
+  -webkit-filter: blur(0);
+} */
 @media (max-width: 850px) {
   .section {
     scroll-margin-top: 10vh;

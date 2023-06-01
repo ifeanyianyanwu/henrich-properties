@@ -39,7 +39,7 @@ const LearnMore = () => {
         <div className={classes["learn-more-text"]}>
           {item?.paragraphs.map((p, index): ReactNode => {
             return (
-              <span key={index}>
+              <span key={p.text}>
                 <p key={index}>{p.text}</p>
                 {p.bulletPoints ? (
                   <ul key={index}>
