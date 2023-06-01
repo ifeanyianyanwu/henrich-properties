@@ -5,8 +5,11 @@ import { SERVICES_DATA } from "../../../helpers/constants";
 import { Card } from "../../ui";
 import Carousel from "../../carousel/Carousel";
 import CarouselItem from "../../carousel/CarouselItem";
+import { useIsVisible } from "../../../hooks/useIsVisible";
 
 const Services = () => {
+  const { ref, isVisible } = useIsVisible();
+
   const width = window.innerWidth;
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -15,9 +18,13 @@ const Services = () => {
   }, [width]);
 
   return (
-    <Section background="grey" id="services" direction="left">
+    <Section background="grey" id="services" direction="left" ref={ref}>
       <Container>
-        <div className={classes.title_container}>
+        <div
+          className={`${classes.title_container} ${
+            isVisible ? classes.appear : ""
+          }`}
+        >
           <p>Services</p>
           <h2>Redefining Real Estate in Nigeria</h2>
           <p>
@@ -35,7 +42,9 @@ const Services = () => {
                   imgUrl={item.image_url}
                   text={item.summary_text}
                   heading={item.heading}
-                  className={classes.card}
+                  className={`${classes.card} ${
+                    isVisible ? classes.appear : ""
+                  }`}
                 />
               </CarouselItem>
             ))}
@@ -49,7 +58,7 @@ const Services = () => {
                 imgUrl={item.image_url}
                 text={item.summary_text}
                 heading={item.heading}
-                className={classes.card}
+                className={`${classes.card} ${isVisible ? classes.appear : ""}`}
               />
             ))}
           </div>
