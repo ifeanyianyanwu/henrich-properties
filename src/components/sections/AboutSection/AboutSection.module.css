@@ -8,6 +8,12 @@
 
 .about_text {
   flex-basis: 50%;
+
+  transform: translateX(-100%);
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 
 .about_text h2 {
@@ -25,6 +31,12 @@
   width: min(80vw, 60rem);
   height: max(calc(20rem + 10vh, 60rem));
   max-height: 60rem;
+
+  transform: translateX(100%);
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 
 .about_img_1 {
@@ -54,4 +66,11 @@
   .about_img {
     min-height: 40rem;
   }
+}
+
+.appear {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  -webkit-filter: blur(0);
 }
