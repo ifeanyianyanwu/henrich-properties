@@ -3,6 +3,12 @@
   margin-inline: auto;
   text-align: center;
   color: var(--light-color);
+
+  transform: translateX(-100%);
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 .title_container h2 {
   font-size: var(--fs-800);
@@ -18,9 +24,16 @@
   gap: 2rem;
   margin-top: 5rem;
 }
+
 .card {
   color: var(--light-color);
   box-shadow: none;
+
+  transform: translateX(-100%);
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
 }
 .card img {
   width: 5rem;
@@ -34,4 +47,20 @@
 .card p {
   color: var(--light-color);
   text-align: center;
+}
+
+.card:nth-child(2) {
+  transition-delay: 250ms;
+}
+.card:nth-child(3) {
+  transition-delay: 500ms;
+}
+.card:nth-child(4) {
+  transition-delay: 750ms;
+}
+.appear {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+  -webkit-filter: blur(0);
 }
