@@ -42,7 +42,7 @@ const LearnMore = () => {
               <span key={p.text}>
                 <p key={index}>{p.text}</p>
                 {p.bulletPoints ? (
-                  <ul key={index}>
+                  <ul key={index + 2}>
                     {p.bulletPoints
                       ? p.bulletPoints.map((bp, index) => (
                           <li key={index}>{bp.point}</li>
