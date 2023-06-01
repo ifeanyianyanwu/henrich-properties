@@ -6,6 +6,7 @@
   padding-inline: min(5%, 10rem);
   padding-block: 1rem;
   height: 12vh;
+  height: 12svh;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -15,6 +16,7 @@
 @media (max-width: 850px) {
   .nav_bar {
     height: 10vh;
+    height: 10svh;
   }
 }
 
