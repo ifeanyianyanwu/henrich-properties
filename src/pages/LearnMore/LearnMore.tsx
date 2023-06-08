@@ -17,7 +17,7 @@ const LearnMore = () => {
       item = WHY_CHOOSE_US_DATA.find((obj) => id === obj.id);
     }
     item ? setItem(item) : navigate("/404");
-  }, []);
+  }, [id]);
 
   const element = document.getElementById("nav-bar");
 
