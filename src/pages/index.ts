@@ -1,5 +1,5 @@
-import LandingPage from "./landingpage/LandingPage";
-import LearnMore from "./learnmore/LearnMore";
-import NotFound from "./notfound/NotFound";
+import LandingPage from "./LandingPage/LandingPage";
+import LearnMore from "./LearnMore/LearnMore";
+import NotFound from "./NotFound/NotFound";
 
 export { LandingPage, LearnMore, NotFound };
