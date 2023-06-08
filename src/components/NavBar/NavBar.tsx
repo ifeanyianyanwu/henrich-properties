@@ -10,6 +10,8 @@ import { createPortal } from "react-dom";
 type Element = HTMLElement | DocumentFragment;
 
 const NavBar = () => {
+  const element = document.getElementById("nav-bar");
+
   //mobile menu state
   const [menuIsShown, setMenuIsShown] = useState(false);
 
@@ -40,6 +42,13 @@ const NavBar = () => {
 
   useEffect(() => {
     setMenuIsShown(false);
+
+    //DEBUG:
+    if (location.pathname !== "/") {
+      element?.classList.add("nav_bg");
+    }
+    return () => element?.classList.remove("nav_bg");
+    //========
   }, [location]);
 
   const logo = (

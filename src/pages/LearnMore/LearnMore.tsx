@@ -12,8 +12,6 @@ const LearnMore = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("running");
-    console.log(id);
     let item = SERVICES_DATA.find((obj) => id === obj.id);
     if (!item) {
       item = WHY_CHOOSE_US_DATA.find((obj) => id === obj.id);
@@ -21,13 +19,14 @@ const LearnMore = () => {
     item ? setItem(item) : navigate("/404");
   }, [id]);
 
-  const element = document.getElementById("nav-bar");
+  //DEBUG:
+  // const element = document.getElementById("nav-bar");
 
-  useEffect(() => {
-    element?.classList.add("nav_bg");
+  // useEffect(() => {
+  //   element?.classList.add("nav_bg");
 
-    return () => element?.classList.remove("nav_bg");
-  }, []);
+  //   return () => element?.classList.remove("nav_bg");
+  // }, []);
 
   return (
     <section className={classes.page_container}>
