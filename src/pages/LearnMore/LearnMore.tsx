@@ -12,6 +12,8 @@ const LearnMore = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("running");
+    console.log(id);
     let item = SERVICES_DATA.find((obj) => id === obj.id);
     if (!item) {
       item = WHY_CHOOSE_US_DATA.find((obj) => id === obj.id);
