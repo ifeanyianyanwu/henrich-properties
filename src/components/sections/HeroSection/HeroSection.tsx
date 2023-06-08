@@ -11,7 +11,7 @@ const HeroSection = () => {
   });
 
   useEffect(() => {
-    if (!inView) {
+    if (inView) {
       element?.classList.add("nav_bg");
     } else {
       element?.classList.remove("nav_bg");

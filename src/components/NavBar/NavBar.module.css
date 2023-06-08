@@ -12,6 +12,7 @@
   z-index: 10;
   background-color: none;
   transition: background-color 0.1s ease-in;
+  background-color: var(--primary-color);
 }
 @media (max-width: 850px) {
   .nav_bar {

@@ -85,7 +85,7 @@ a {
 
 /* this a class to handle back ground color change of the nav bar when the home page is out of view. */
 .nav_bg {
-  background-color: var(--primary-color);
+  background-color: transparent !important;
 }
 
 /* this a class to handle the prevention of scrolling on the body when the mobile navigation is open */

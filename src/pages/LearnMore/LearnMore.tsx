@@ -19,15 +19,6 @@ const LearnMore = () => {
     item ? setItem(item) : navigate("/404");
   }, [id]);
 
-  //DEBUG:
-  // const element = document.getElementById("nav-bar");
-
-  // useEffect(() => {
-  //   element?.classList.add("nav_bg");
-
-  //   return () => element?.classList.remove("nav_bg");
-  // }, []);
-
   return (
     <section className={classes.page_container}>
       <Container>
