@@ -13,19 +13,6 @@ type IProps = {
 
 const Section = forwardRef<HTMLElement, IProps>(
   ({ id, background, children, direction }: IProps, ref) => {
-    // const [isVisible, setIsVisible] = useState(false);
-    // const [ref, inView] = useInView({
-    //   triggerOnce: true,
-    //   rootMargin: "0px 0px -120px 0px",
-    // });
-
-    // Handle the visibility change
-    // useEffect(() => {
-    //   if (inView) {
-    //     setIsVisible(true);
-    //   }
-    // }, [inView]);
-
     const colors = {
       grey: "grey-background",
       white: "white-background",
