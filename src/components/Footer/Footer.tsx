@@ -1,6 +1,7 @@
-import React from "react";
 import { Container, Section } from "../../layout";
-import { HiBuildingOffice, HiPhone } from "react-icons/hi2";
+import { HiBuildingOffice, HiPhone, HiMiniLink } from "react-icons/hi2";
+import { RiTwitterXLine } from "react-icons/ri";
+import { AiFillInstagram } from "react-icons/ai";
 import { HiMail } from "react-icons/hi";
 import classes from "./Footer.module.css";
 
@@ -28,17 +29,25 @@ const Footer = () => {
               </h3>
               <p>+234-70-34814448</p>
               <p>+234-70-33336675</p>
-              <p>092920266</p>
             </span>
             <span className={classes.mail}>
               <h3>
                 <HiMail /> Email
               </h3>
-              <a href="mailto:henrichpropertiesltd@gmail.com">
+              <a href="mailto:henrichpropertieslimited@gmail.com">
                 henrichpropertiesltd@gmail.com
               </a>
-              <a href="mailto:info@henrichpropertiesltd.com">
-                info@henrichpropertiesltd.com
+            </span>
+            <span className={classes.mail}>
+              <h3>
+                <HiMiniLink />
+                Social media
+              </h3>
+              <a href="https://www.instagram.com/henrichpropertiesltd">
+                <AiFillInstagram /> Instagram
+              </a>
+              <a href="https://x.com/henrichltd">
+                <RiTwitterXLine /> Twitter-X
               </a>
             </span>
           </div>

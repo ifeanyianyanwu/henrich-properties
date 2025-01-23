@@ -34,5 +34,8 @@
   font-size: var(--fs-400);
   margin-top: 1rem;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   color: var(--light-color);
 }
