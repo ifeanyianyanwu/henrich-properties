@@ -17,7 +17,7 @@ const Footer = () => {
                 <HiBuildingOffice /> Address
               </h3>
               <p>
-                21A Justice Sowemimo, <br />
+                21 Justice Sowemimo, <br />
                 Asokoro,
                 <br />
                 Abuja
