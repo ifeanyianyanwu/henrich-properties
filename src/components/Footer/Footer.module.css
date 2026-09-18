@@ -22,7 +22,9 @@
   align-items: center;
   gap: 0.5rem;
 }
+.contact_details a,
 .contact_details p {
+  display: block;
   font-size: var(--fs-400);
   color: var(--light-color);
 }

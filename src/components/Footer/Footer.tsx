@@ -27,15 +27,15 @@ const Footer = () => {
               <h3>
                 <HiPhone /> Telephone
               </h3>
-              <p>+234-70-34814448</p>
-              <p>+234-70-33336675</p>
+              <a href="tel:+2348140110528">+234-81-40110528</a>
+              <a href="tel:+4475019979962">+44-75-019979962</a>
             </span>
             <span className={classes.mail}>
               <h3>
                 <HiMail /> Email
               </h3>
               <a href="mailto:henrichpropertieslimited@gmail.com">
-                henrichpropertiesltd@gmail.com
+                henrichpropertieslimited@gmail.com
               </a>
             </span>
             <span className={classes.mail}>
@@ -43,7 +43,10 @@ const Footer = () => {
                 <HiMiniLink />
                 Social media
               </h3>
-              <a href="https://www.instagram.com/henrichpropertiesltd">
+              <a
+                href="https://www.instagram.com/henrichpropertieslimited
+"
+              >
                 <AiFillInstagram /> Instagram
               </a>
               <a href="https://x.com/henrichltd">
